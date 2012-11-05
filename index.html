@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="haw">
+<head>
+  <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css"/>
+  <style type="text/css">
+html, body {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <h2>Pull Command</h2>
+        <canvas id="missilecanvas" width="480" height="600" onmousemove="movem(event)" style="background:url('http://i.imgur.com/ImYaZ.png');background-repeat:no-repeat;"></canvas>
+        <script src="http://mapmeld.github.com/PullCommand/missile_command.js" type="text/javascript"></script>
+      </div>
+      <div class="span4">
+        <div id="gameinfo">
+          <h3>The Rules are simple</h3>
+          <p>You run the Twitter Bootstrap GitHub repo (an online code library).</p>
+          <p>You face several incoming pull requests (code changes).</p>
+          <p>You gain a point for shooting down "bad", rejected pull requests or letting "good", accepted ones pass through.</p>
+          <p>You lose a point for doing it the other way around.</p>
+          <p>Use the pull request message to determine friend from foe.</p>
+          <br/>
+          <p>Based on Andy Mason's <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">JavaScript Missile Command</a></p>
+          <a class="btn btn-info" href="#" onclick="MC.init();">Ready to Play</a>
+        </div>
+        <div id="scoreinfo" style="font-size:16pt;">
+          <h4>Score</h4>
+          <span id="goodpoints">0</span>
+          -
+          <span id="badpoints">0</span>
+          =
+          <span id="totalpoints">0</span>
+        </div>
+        <hr/>
+        <div id="pullinfo">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
