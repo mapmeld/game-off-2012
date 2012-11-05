@@ -14,4 +14,8 @@
 
 ## Inspiration
 
-<p>Based on Andy Mason's <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">JavaScript Missile Command</a></p>
+<p>Based on Andy Mason's MIT-licensed <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">JavaScript Missile Command</a>.</p>
+
+## License
+
+Open source, MIT license
