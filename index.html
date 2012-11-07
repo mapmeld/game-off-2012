@@ -15,12 +15,27 @@ html, body {
 <body>
   <div class="container">
     <div class="row">
-      <div class="span8">
-        <h2>Pull Command</h2>
-        <canvas id="missilecanvas" width="600" height="480" onmousemove="movem(event)" style="background:url('http://i.imgur.com/ImYaZ.png');background-repeat:no-repeat;"></canvas>
+      <div class="span10">
+        <canvas id="missilecanvas" width="800" height="480" onmousemove="movem(event)" style="background:url('http://i.imgur.com/ImYaZ.png');background-repeat:no-repeat;"></canvas>
         <script src="missile_command2.js" type="text/javascript"></script>
       </div>
-      <div class="span4">
+      <div class="span2">
+        <h2>Pull Command</h2>
+        <div id="scoreinfo" style="font-size:16pt;">
+          <h4>Score</h4>
+          <span id="goodpoints">0</span>
+          -
+          <span id="badpoints">0</span>
+          =
+          <span id="totalpoints">0</span>
+        </div>
+        <br/>
+        <br/>
+        <a id="startbutton" class="btn btn-info" href="#" onclick="MC.init();">START</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
         <div id="gameinfo">
           <h3>The Rules are simple</h3>
           <p>You run the Twitter Bootstrap GitHub repo (an online code library).</p>
@@ -30,15 +45,6 @@ html, body {
           <p>Use the pull request message to determine friend from foe.</p>
           <br/>
           <p>Based on Andy Mason's <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">JavaScript Missile Command</a></p>
-          <a class="btn btn-info" href="#" onclick="MC.init();">Ready to Play</a>
-        </div>
-        <div id="scoreinfo" style="font-size:16pt;">
-          <h4>Score</h4>
-          <span id="goodpoints">0</span>
-          -
-          <span id="badpoints">0</span>
-          =
-          <span id="totalpoints">0</span>
         </div>
         <hr/>
         <div id="pullinfo">

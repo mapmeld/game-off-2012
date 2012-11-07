@@ -491,6 +491,7 @@ var MC = MC || (function() {
          * Sets up the missile waves
          */
         function init() {
+            document.getElementById("startbutton").style.display = "none";
             document.getElementById("gameinfo").style.display = "none";
             for (var i = 0; i < TOTAL_WAVE_NUM; i++) {
                 _waves[i] = {
@@ -577,7 +578,7 @@ var MC = MC || (function() {
         this.pos = {};
         this.pullreq = pullreq;
         this.origin = origin || {
-            'x': 600,
+            'x': 800,
             'y': engine.getHeight() * Math.random()
         };
         

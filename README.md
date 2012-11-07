@@ -1,8 +1,8 @@
 # Pull Command
 
-### A game based on GitHub
+### A game based on Github
 
-<img src="http://i.imgur.com/SRI9m.png"/>
+<img src="http://i.imgur.com/HBthT.png"/>
 
 ## Gameplay
 
