@@ -1,8 +1,5 @@
 /**
- * Missile Commnad HTML5 JavaScript clone
- * 
- * @author  Andrew Mason
- * @contact andrew@coderonfire.com
+ * Missile Command HTML5 JavaScript clone
  * 
  */
  
@@ -12,7 +9,7 @@ function movem(e){
   mouseY = e.layerY;
 }
 
-var pulls = [
+var bootstraps = [
   {
     id: 4237,
     title: "Changed CSS rules for outlines in active/focus states",
@@ -213,6 +210,167 @@ var pulls = [
   },
   
 ];
+
+var rails = [
+  {
+    id: 8193,
+    title: "Add release date of Rails 3.2.9 to documentation",
+    body: "Change \r\n    \r\n    Rails 3.2.9 (unreleased)\r\n\r\nto\t\r\n\r\n    Rails 3.2.9 (Nov 12, 2012)",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/4dea5cf83d2d6c1228750b76e579b38d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 8190,
+    title: "Adding suppport for conditional content_tag",
+    body: "This is an attempt to fix this very un-DRY pattern that happens a lot:\r\n\r\n```erb\r\n<% if something == true %>\r\n  <%= content_tag(:div, :class => 'wrapper') do %>\r\n    Content\r\n    # ... and more stuff\r\n  <% end %>\r\n<% else %>\r\n  Content\r\n  # ... and more of the same stuff as above\r\n<% end %>\r\n```\r\nNow it's collapsible to this:\r\n\r\n```erb\r\n<%= content_tag_if(something == true, :div, :class => 'wrapper') do %>\r\n  Content\r\n  # ... and more stuff\r\n<% end %>\r\n```\r\n\r\nAlso added `content_tag_unless` for convenience sake.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/0fd3f116897f75ec1de34a4ec77cac88?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  },
+  {
+    id: 8185,
+    title: "`#as_json` isolates options when encoding a hash. Closes #8182",
+    body: "I modified the `Encoder` so that duplicates of the original `options` hash are passed around. I'm not sure if there are cases where we actually wan't the side effects but all the tests passed.\r\n\r\nThis is a fix #8182",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/3d698e2872c07061a455d9e250861235?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 8184,
+    title: "Merge and add tests related to 5215",
+    body: "Merge redundant tests and add new ones to has_and_belongs_to_many and has_many_through associations for null relation usage on new records.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/f459742822cf8347e83d5c445378a934?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 8173,
+    title: "Match classes without to_s conversions.",
+    body: "There is no need in `value_under_case.class.to_s` conversion since `case` already matches classes with `Class === value_under_case`.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/956e1f1d80bf09a129a5d0e483667794?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 8168,
+    title: "Rake test:uncommitted finds git directory in ancestors.",
+    body: "Sometimes your git directory is an ancestor of your application root\r\ndirectory.\r\n\r\nFor example:\r\n ./repo/.git/\r\n ./repo/app/Rakefile\r\n\r\nIn this case rake test:uncommitted will be unable to detect your SCM.\r\n\r\nThis patch fixes this and add a test.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/3da82a61d5fbd74242cc6f671a5a32e4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  },
+  
+  {
+    id: 8150,
+    title: "Don't eagerload the app directory",
+    body: "From issue: https://github.com/rails/rails/pull/8146",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/56e905e1e4a9137194df95dce0a73a30?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  },
+  {
+    id: 8141,
+    title: "Remove overmonkeypatching for Object#to_json",
+    body: "All classes are inherited from Object.\r\nNo need to monkeypatch thme all.\r\n\r\nChecked AM and AR tests - all pass.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/91913f6ab8085bab0f2aa43995ba8ca2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  }
+
+];
+
+var metas = [
+  {
+    id: -1,
+    title: "Speed up incoming missiles",
+    body: "Accepting this request speeds up incoming missiles.",
+    user: {
+      avatar_url: "http://i.imgur.com/AE4dw.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      /* speed up incoming missiles */
+    }
+  },
+  {
+    id: -2,
+    title: "Comic Sans",
+    body: "Switch font of all sections to Comic Sans. lol",
+    user: {
+      avatar_url: "http://i.imgur.com/r4ooT.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      document.body.style.fontFamily = "'Comic Sans MS'";
+    }
+  },
+  {
+    id: -3,
+    title: "User fires two missiles",
+    body: "Add a second missile-launcher for the user to defend their base",
+    user: {
+      avatar_url: "http://i.imgur.com/dfMJ2.jpg"
+    },
+    outcome: "merge",
+    run: function(){
+      /* add second firing post */
+    }
+  },
+  {
+    id: -4,
+    title: "Hide scoreboard",
+    body: "If you think about it, life is not about who wins and who loses.",
+    user: {
+      avatar_url: "http://i.imgur.com/lceSZ.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      document.getElementById("scoreinfo").style.display = "none";
+    }
+  },
+  {
+    id: -5,
+    title: "Restore scoreboard",
+    body: "Brings back scoreboard in case another pull request has hidden it",
+    user: {
+      avatar_url: "http://i.imgur.com/dfMJ2.jpg"
+    },
+    outcome: "merge",
+    run: function(){
+      document.getElementById("scoreinfo").style.display = "block";
+    }
+  }
+
+];
+
+var pulls = metas;
+var setGameMode = 0;
+function gameMode(repo){
+  document.getElementById("gameMode" + setGameMode).className = "";
+  document.getElementById("gameMode" + repo).className = "active";  
+  switch(repo){
+    case 0:
+      pulls = metas;
+      break;
+    case 1:
+      pulls = bootstraps;
+      break;
+    case 2:
+      pulls = rails;
+      break;
+  }
+}
+
+
 var lastMissile = Math.floor(Math.random() * pulls.length);
 
 var MC = MC || (function() {
@@ -491,6 +649,7 @@ var MC = MC || (function() {
          * Sets up the missile waves
          */
         function init() {
+            document.getElementById("gamemodeselect").style.display = "none";
             document.getElementById("startbutton").style.display = "none";
             document.getElementById("gameinfo").style.display = "none";
             for (var i = 0; i < TOTAL_WAVE_NUM; i++) {
@@ -621,6 +780,9 @@ var MC = MC || (function() {
             else if(this.pullreq.outcome == "reject"){
               document.getElementById("badpoints").innerHTML = document.getElementById("badpoints").innerHTML * 1 + 1;
               document.getElementById("totalpoints").innerHTML = document.getElementById("totalpoints").innerHTML * 1 - 1;
+            }
+            if(this.pullreq.run){
+              (this.pullreq.run)();
             }
             return true;
         } else {
