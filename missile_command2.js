@@ -488,6 +488,7 @@ var pulls = metas;
 var setGameMode = 0;
 function gameMode(repo){
   document.getElementById("gameMode" + setGameMode).className = "";
+  setGameMode = repo;
   document.getElementById("gameMode" + repo).className = "active";  
   switch(repo){
     case 0:
