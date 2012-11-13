@@ -288,6 +288,138 @@ var rails = [
 
 ];
 
+var storms = [
+  {
+    id: 395,
+    title: "catch-errors middleware added",
+    body: "Display stack trace instead of plain white screen when exception happens in action method of UI.\r\nIt's very useful for me to see exception in browser. For example, I can understand when nimbus isn't available or topology with specified name isn't exists, etc.\r\n\r\nScreenshot: http://f.slukjanov.name/storm/ui-errors-demo.png\r\n\r\nP.S. we can write tons of handlers to write error message like \"Nimbus isn't available\", but I think that this information is easy parseable from stack traces.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/e4234ee8fa255d88d737672485bc12c8?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 394,
+    title: "kill --all flag",
+    body: "Simple way to kill all topologies in Storm cluster.\r\n\r\nbuild: http://f.frostman.ru/tsc-dists/storm-0.8.2-wip15-killall.zip",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/e4234ee8fa255d88d737672485bc12c8?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  },
+  {
+    id: 388,
+    title: "expose testing/test-tuple into java api",
+    body: "for issue #334",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/2e4b76a1b6ac1809a564333068ba1760?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 338,
+    title: "add validation for the projection field",
+    body: "for issue #324",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/2e4b76a1b6ac1809a564333068ba1760?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  },
+  {
+    id: 344,
+    title: "log topology submission issues",
+    body: "A storm user was not printing exceptions thrown by StormSubmitter, wasted a bit of time because nimbus.log had no info about it.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/74c804ddbe8b3e9caa3d30c88d8c9665?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 346,
+    title: "Update src/multilang/py/storm.py",
+    body: "",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/e2ab1b5a01dc6ab3dabd65f1070f6a57?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "reject"
+  },
+  {
+    id: 349,
+    title: "IntelliJ IDEA project/workspace files added to gitignore",
+    body: "",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/e4234ee8fa255d88d737672485bc12c8?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 366,
+    title: "Include a warning about Leiningen 2.x in docs",
+    body: "Currently \"lein (uber)jar\" silently fails when using lein >= 2, and \"lein test\" complains about missing files on the classpath.<br/><br/>This is a pain when you're trying to get your dev environment setup for Storm, after following every instruction to a tee, only to have nothing work. As long as Storm is incompatible with lein 2.x, a big warning should be included somewhere in the docs telling the user to use lein 1.x",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/2410b95d82bae7b93788a5d40e14d736?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  }
+];
+
+var fortrans = [
+  {
+    id: 99,
+    title: "Reimplement Neumann conditions",
+    body: "Reimplements the integration of point based Neumann conditions to give integrated nodal force values.\n\nTracker items [2111](https://tracker.physiomeproject.org/show_bug.cgi?id=2111) and [1809](https://tracker.physiomeproject.org/show_bug.cgi?id=1809).",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/c48ed994ee7731ac99147d0161bd81e1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 99,
+    title: "Reimplement Neumann conditions",
+    body: "Reimplements the integration of point based Neumann conditions to give integrated nodal force values.\n\nTracker items [2111](https://tracker.physiomeproject.org/show_bug.cgi?id=2111) and [1809](https://tracker.physiomeproject.org/show_bug.cgi?id=1809).",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/c48ed994ee7731ac99147d0161bd81e1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 126,
+    title: "Adding additional valgrind options to example makefile.",
+    body: "Adding additional valgrind options to example makefile.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/e86c5d5b142a13248cbbce010fea141a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 121,
+    title: "Allow disabling control loop timing output",
+    body: "This caused crashes in fluid_mechanics_IO_routines with my Navier Stokes example so I wanted to disable the control loop output.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/c48ed994ee7731ac99147d0161bd81e1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 108,
+    title: "Fix getting a surface for a regular generated mesh with simplex elements",
+    body: "The new generated_mesh_regular_component_node_to_user_number doesn't work with simplex elements so we need to use the original component_node_to_user_number function for simplex meshes.",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/c48ed994ee7731ac99147d0161bd81e1?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  },
+  {
+    id: 110,
+    title: "Fix typo in isotropic exponential constitutive relation",
+    body: "I'd only ever used this with regular meshes and simple deformation modes so this error went unnoticed.<br/>PIOLA_TENSOR(2,3)=2.0_DP*P*AZU(1,2)<br/>should have been:<br/>PIOLA_TENSOR(2,3)=2.0_DP*P*AZU(2,3)",
+    user: {
+      avatar_url: "https://secure.gravatar.com/avatar/c48ed994ee7731ac99147d0161bd81e1?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+    },
+    outcome: "merge"
+  }
+];
+
 var metas = [
   {
     id: -1,
@@ -366,6 +498,12 @@ function gameMode(repo){
       break;
     case 2:
       pulls = rails;
+      break;
+    case 3:
+      pulls = storms;
+      break;
+    case 4:
+      pulls = fortrans;
       break;
   }
 }
