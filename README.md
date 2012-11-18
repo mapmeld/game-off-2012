@@ -6,8 +6,8 @@
 
 ## Gameplay
 
-<p>You run the Twitter Bootstrap GitHub repo (an online code library).</p>
-<p>You face several incoming pull requests (code changes).</p>
+<p>You run a Github repo (an online code library).</p>
+<p>You face several incoming pull requests (code changes) which either affect the game as you play it (Meta mode) or represent real code changes (including repos such as Bootstrap, Rails, and a FORTRAN project).</p>
 <p>You gain points for shooting down "bad", rejected pull requests and letting "good", accepted ones pass through.</p>
 <p>You lose points for doing it the other way around.</p>
 <p>Use the pull request message to determine friend from foe. Hover the mouse over an incoming missile to see this.</p>
