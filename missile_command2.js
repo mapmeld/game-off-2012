@@ -71,10 +71,10 @@ var metas = [
 
 var pulls = metas;
 var setGameMode = 0;
-function gameMode(repo){
+function gameMode(index, repo){
   document.getElementById("gameMode" + setGameMode).className = "";
-  setGameMode = repo;
-  document.getElementById("gameMode" + repo).className = "active";  
+  setGameMode = index;
+  document.getElementById("gameMode" + index).className = "active";  
   if(repo == "meta"){
     pulls = metas;
   }
