@@ -83,7 +83,7 @@ function gameMode(index, repo){
     pulls = metas;
   }
   else{
-    $.getJSON("/" + repo + ".json", function(irlpulls){
+    $.getJSON(repo + ".json", function(irlpulls){
       pulls = irlpulls;
     });
   }
