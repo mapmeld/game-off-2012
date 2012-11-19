@@ -15,7 +15,7 @@
 ## Inspiration
 
 <p>Based on Andy Mason's MIT-licensed <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">Missile Command JavaScript Clone</a>.</p>
-<p>Includes <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a></p>
+<p>Includes Bootstrap and jQuery</p>
 
 ## License
 

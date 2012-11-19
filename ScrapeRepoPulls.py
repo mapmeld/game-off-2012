@@ -7,8 +7,8 @@ import urllib, json, time
 # define each repo you are scraping in this run
 # user_name/repo_name as set in the URL
 repos = [
-  "OpenCMISS/cm",
-  "twitter/bootstrap",
+  #"OpenCMISS/cm",
+  #"twitter/bootstrap",
   "rails/rails",
   "nathanmarz/storm",
 ]
