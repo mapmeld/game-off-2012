@@ -83,14 +83,17 @@ function gameMode(index, repo){
     pulls = metas;
   }
   else{
+    $("#startbutton").addClass("disabled");
     $.ajax({
       url: repo + ".json",
       dataType: "json",
       success: function(irlpulls){
         pulls = irlpulls;
+        $("#startbutton").removeClass("disabled");
       },
       error: function(irlpulls){
         pulls = JSON.parse(irlpulls.responseText);
+        $("#startbutton").removeClass("disabled");
       }
     });
   }
