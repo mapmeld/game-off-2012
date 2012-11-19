@@ -7,8 +7,8 @@ import urllib, json, time
 # define each repo you are scraping in this run
 # user_name/repo_name as set in the URL
 repos = [
-  #"OpenCMISS/cm",
-  #"twitter/bootstrap",
+  "OpenCMISS/cm",
+  "twitter/bootstrap",
   "rails/rails",
   "nathanmarz/storm",
 ]
@@ -67,7 +67,7 @@ for repo in repos:
 	# save this JSON file
 	print "Saving " + repo
 	missiles = open(repo.replace('/','-') + ".json", 'w')
-	missiles.write( str( output_pulls[index] ) )
+	missiles.write( json.dumps( output_pulls[index] ) )
 	missiles.close()
 
 	# go to next repo
