@@ -83,8 +83,15 @@ function gameMode(index, repo){
     pulls = metas;
   }
   else{
-    $.getJSON(repo + ".json", function(irlpulls){
-      pulls = irlpulls;
+    $.ajax({
+      url: repo + ".json",
+      dataType: "json",
+      success: function(irlpulls){
+        pulls = irlpulls;
+      },
+      error: function(irlpulls){
+        pulls = JSON.parse(irlpulls.responseText);
+      }
     });
   }
 }
