@@ -4,6 +4,10 @@
  */
 
 var mouseX, mouseY, lastpull;
+function movem(e){
+  mouseX = e.layerX;
+  mouseY = e.layerY;
+}
 
 var metas = [
   {
