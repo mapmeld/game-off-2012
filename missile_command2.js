@@ -89,10 +89,12 @@ function gameMode(index, repo){
       dataType: "json",
       success: function(irlpulls){
         pulls = irlpulls;
+        lastMissile = Math.floor(Math.random() * pulls.length);
         $("#startbutton").removeClass("disabled");
       },
       error: function(irlpulls){
         pulls = JSON.parse(irlpulls.responseText);
+        lastMissile = Math.floor(Math.random() * pulls.length);
         $("#startbutton").removeClass("disabled");
       }
     });
