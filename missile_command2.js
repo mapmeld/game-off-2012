@@ -150,6 +150,11 @@ var metas = [
 
 var pulls = metas;
 var setGameMode = 0;
+function startInMeta(){
+  gameMode(0, "meta");
+  MC.init();
+}
+
 function gameMode(index, repo){
   document.getElementById("gameMode" + setGameMode).className = "";
   setGameMode = index;
@@ -499,6 +504,8 @@ var MC = MC || (function() {
             document.getElementById("gamemodeselect").style.display = "none";
             document.getElementById("startbutton").style.display = "none";
             document.getElementById("gameinfo").style.display = "none";
+            document.getElementById("supportme").style.display = "none";
+            document.getElementById("credit").style.display = "none";
             for (var i = 0; i < TOTAL_WAVE_NUM; i++) {
                 _waves[i] = {
                     'MissilesToDetroy': 10 + i,

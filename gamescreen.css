@@ -11,6 +11,11 @@ html, body {
    background-color: #fff;
 }
 
+#gameinfo{
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
 .leftbar{
 	text-align:center;
 }
@@ -46,6 +51,12 @@ html, body {
 	border: 1px solid #CACACA;
 	background-color: whitesmoke;
 	padding: 8px;
+	width:70%;
+	float:left;
+}
+#pulliconcontainer{
+	width:20%;
+	float:left;
 }
 #pullicon{
 	width:60px;
