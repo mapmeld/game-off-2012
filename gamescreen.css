@@ -35,3 +35,19 @@ html, body {
 	background:url('screenshot.png');
 	background-repeat:no-repeat;
 }
+
+#pullreqmain{
+    border: 2px solid silver;
+    padding: 8px;
+    border-radius: 6px;
+    display: none;
+}
+#pulllabel{
+	border: 1px solid #CACACA;
+	background-color: whitesmoke;
+	padding: 8px;
+}
+#pullicon{
+	width:60px;
+	margin:10px;
+}

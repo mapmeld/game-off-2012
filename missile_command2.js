@@ -317,13 +317,19 @@ var MC = MC || (function() {
               if(lastpull != _entities.missiles[e].pullreq.title){
                 //console.log(_entities.missiles[e].pullreq.title);
                 lastpull = _entities.missiles[e].pullreq.title;
-                document.getElementById("pullinfo").innerHTML = "<h4>" + _entities.missiles[e].pullreq.title + "</h4><img src='" + _entities.missiles[e].pullreq.user.avatar_url + "' style='float:left;width:60px;margin:10px;'/>" + _entities.missiles[e].pullreq.body + "</p>";
+                
+                //document.getElementById("pullinfo").innerHTML = "<h4>" + _entities.missiles[e].pullreq.title + "</h4><img src='" + _entities.missiles[e].pullreq.user.avatar_url + "' style='float:left;width:60px;margin:10px;'/>" + _entities.missiles[e].pullreq.body + "</p>";
+                document.getElementById("pullreqmain").style.display = "block";
+                document.getElementById("pulltitle").innerHTML = _entities.missiles[e].pullreq.title;
+                document.getElementById("pullicon").src = _entities.missiles[e].pullreq.user.avatar_url;
+                document.getElementById("pullbody").innerHTML = _entities.missiles[e].pullreq.body;
               }
             }
           }
           if(!anypulls){
             lastpull = null;
-            document.getElementById("pullinfo").innerHTML = "";
+            //document.getElementById("pullinfo").innerHTML = "";
+            document.getElementById("pullreqmain").style.display = "none";
           }
             
             var count = _entities.rockets.length;
