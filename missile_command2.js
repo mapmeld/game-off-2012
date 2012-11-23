@@ -11,6 +11,7 @@ function movem(e){
 
 var missileSpeedMultiplier = 1;
 var secondFiringPost = false;
+var delayRockets = false;
 
 var metas = [
   {
@@ -23,10 +24,10 @@ var metas = [
     outcome: "reject",
     run: function(){
       if(missileSpeedMultiplier == 1){
-        missileSpeedMultiplier = 2;
+        missileSpeedMultiplier = 1.5;
       }
       else{
-        missileSpeedMultiplier *= 1.7;      
+        missileSpeedMultiplier *= 1.07;
       }
     }
   },
@@ -77,6 +78,71 @@ var metas = [
     outcome: "merge",
     run: function(){
       document.getElementById("scoreinfo").style.display = "block";
+    }
+  },
+  {
+    id: -6,
+    title: "Zoom font!",
+    body: "Switch font of page to <span style='font-family:\"Faster One\";'>Faster One</span>.",
+    user: {
+      avatar_url: "http://i.imgur.com/r4ooT.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      document.body.style.fontFamily = "'Faster One'";
+    }
+  },
+  {
+    id: -6.5,
+    title: "Slow down incoming missiles",
+    body: "Slow down the incoming missiles by letting this pass through.",
+    user: {
+      avatar_url: "http://i.imgur.com/r4ooT.jpg"
+    },
+    outcome: "merge",
+    run: function(){
+      if(missileSpeedMultiplier <= 1.5){
+        missileSpeedMultiplier = 1;
+      }
+      else{
+        missileSpeedMultiplier /= 1.07;
+      }
+    }
+  },
+  {
+    id: -6.75,
+    title: "Eliminate backup launcher",
+    body: "If user has a second defensive rocket launcher, it gets eliminated",
+    user: {
+      avatar_url: "http://i.imgur.com/r4ooT.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      secondFiringPost = false;
+    }
+  },
+  {
+    id: -7,
+    title: "Restore font",
+    body: "Switch font of page to <span style='font-family:\"Forum\";'>Forum</span>.",
+    user: {
+      avatar_url: "http://i.imgur.com/AE4dw.jpg"
+    },
+    outcome: "merge",
+    run: function(){
+      document.body.style.fontFamily = "'Forum'";
+    }
+  },
+  {
+    id: -8,
+    title: "Delay defensive launches",
+    body: "Delay launch of the user's defense rockets",
+    user: {
+      avatar_url: "http://i.imgur.com/r4ooT.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      delayRockets = true;
     }
   }
 
@@ -166,23 +232,46 @@ var MC = MC || (function() {
                 'y': event.clientY - this.offsetTop
             };
             
-            _entities.rockets.push(new Rocket(
-                target,
-                {
-                    'x': _entities.turret.pos.x + _entities.turret.width,
-                    'y': _entities.turret.pos.y + (_entities.turret.height / 2)
-                }
-            ));
-            
-            if(secondFiringPost){
+            if(delayRockets){
+        		setTimeout(function(){
+		            _entities.rockets.push(new Rocket(
+		                target,
+		                {
+		                    'x': _entities.turret.pos.x + _entities.turret.width,
+		                    'y': _entities.turret.pos.y + (_entities.turret.height / 2)
+		                }
+		            ));
+
+		            if(secondFiringPost){
+			            _entities.rockets.push(new Rocket(
+			                target,
+			                {
+			                    'x': _entities.turret.pos.x + _entities.turret.width,
+			                    'y': 110
+			                }
+			            ));
+	    	        }
+        		}, 350);
+        	}
+        	else{
 	            _entities.rockets.push(new Rocket(
 	                target,
 	                {
-	                    'x': 0,
-	                    'y': 100
+	                    'x': _entities.turret.pos.x + _entities.turret.width,
+	                    'y': _entities.turret.pos.y + (_entities.turret.height / 2)
 	                }
 	            ));
-            }
+
+	            if(secondFiringPost){
+		            _entities.rockets.push(new Rocket(
+		                target,
+		                {
+		                    'x': _entities.turret.pos.x + _entities.turret.width,
+		                    'y': 110
+		                }
+		            ));
+    	        }
+    	    }
         }
 
         /**

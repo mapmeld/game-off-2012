@@ -5,6 +5,7 @@ html, body {
    -ms-user-select: none;
    user-select: none;
    background-color: #f8f8f8;
+   font-weight: normal;
 }
 .container{
    background-color: #fff;
