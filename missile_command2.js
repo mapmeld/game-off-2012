@@ -9,6 +9,9 @@ function movem(e){
   mouseY = e.layerY;
 }
 
+var missileSpeedMultiplier = 1;
+var secondFiringPost = false;
+
 var metas = [
   {
     id: -1,
@@ -19,7 +22,12 @@ var metas = [
     },
     outcome: "reject",
     run: function(){
-      /* speed up incoming missiles */
+      if(missileSpeedMultiplier == 1){
+        missileSpeedMultiplier = 2;
+      }
+      else{
+        missileSpeedMultiplier *= 1.7;      
+      }
     }
   },
   {
@@ -44,6 +52,7 @@ var metas = [
     outcome: "merge",
     run: function(){
       /* add second firing post */
+      secondFiringPost = true;
     }
   },
   {
@@ -164,6 +173,16 @@ var MC = MC || (function() {
                     'y': _entities.turret.pos.y + (_entities.turret.height / 2)
                 }
             ));
+            
+            if(secondFiringPost){
+	            _entities.rockets.push(new Rocket(
+	                target,
+	                {
+	                    'x': 0,
+	                    'y': 100
+	                }
+	            ));
+            }
         }
 
         /**
@@ -482,7 +501,7 @@ var MC = MC || (function() {
         this.angle = Math.atan(y / x);
 
         this.colour = 'rgb(0, 255, 0)';
-        this.speed = speed / 1.7;
+        this.speed = speed / 1.7 * missileSpeedMultiplier;
         this.distance = 0;
     };
 
