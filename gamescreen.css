@@ -1,0 +1,36 @@
+html, body {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   background-color: #f8f8f8;
+}
+.container{
+   background-color: #fff;
+}
+
+.leftbar{
+	text-align:center;
+}
+#scoreinfo{
+	font-size:16pt;
+}
+#gamemodeselect{
+    border: 2px solid #777;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    margin-right: -5px;
+    margin-left: 5px;
+}
+#gamemodeselect ul{
+	padding-left:8px;
+	padding-right:8px;
+}
+#gamemodeselect ul li a{
+	font-size:8pt;
+}
+#missilecanvas{
+	background:url('screenshot.png');
+	background-repeat:no-repeat;
+}

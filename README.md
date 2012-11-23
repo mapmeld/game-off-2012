@@ -7,10 +7,45 @@
 ## Gameplay
 
 <p>You run a Github repo (an online code library).</p>
-<p>You face several incoming pull requests (code changes) which either affect the game as you play it (Meta mode) or represent real code changes (including repos such as Bootstrap, Rails, and a FORTRAN project).</p>
+<p>You face several incoming pull requests (code changes) which either affect the game as you play it (Meta mode) or represent real Github code changes (Bootstrap, Rails, and a FORTRAN project).</p>
 <p>You gain points for shooting down "bad", rejected pull requests and letting "good", accepted ones pass through.</p>
 <p>You lose points for doing it the other way around.</p>
-<p>Use the pull request message to determine friend from foe. Hover the mouse over an incoming missile to see this.</p>
+<p>Use the pull request message to determine friend from foe. Hover the mouse over an incoming missile to see a description.</p>
+
+### Start in Meta Mode
+
+<p>Even if you don't know about Github or coding, you can play in Meta mode.</p>
+
+#### Sample "bad" pull requests
+<ul>
+	<li>Double speed of incoming missiles</li>
+	<li>Change font to Comic Sans</li>
+</ul>
+
+#### Sample "good" pull requests
+<ul>
+	<li>Add second defense launcher</li>
+	<li>Slow down incoming missiles</li>
+	<li>Draw cooler defense city</li>
+</ul>
+
+## Customization
+Pull Command runs on Github Pages. You can generate new JSON files with the included ScrapeRepoPulls.py
+
+1) Set the repo list
+
+    repos = [
+      "twitter/bootstrap",
+      "rails/rails"
+    ]
+
+2) Run python ScrapeRepoPulls.py. It may take several minutes to a few hours to download pull request information.
+
+3) Add options to index.html
+
+    <li id="gameMode4">
+      <a href="#" onclick="gameMode(5, 'USERNAME-REPONAME');">REPONAME</a>
+    </li>
 
 ## Inspiration
 
