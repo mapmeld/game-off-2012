@@ -379,6 +379,9 @@ var MC = MC || (function() {
          * Sets up the missile waves
          */
         function init() {
+        	if( $("#startbutton").hasClass("disabled") ){
+        		return;
+        	}
             document.getElementById("gamemodeselect").style.display = "none";
             document.getElementById("startbutton").style.display = "none";
             document.getElementById("gameinfo").style.display = "none";
