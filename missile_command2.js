@@ -12,6 +12,7 @@ function movem(e){
 var missileSpeedMultiplier = 1;
 var secondFiringPost = false;
 var delayRockets = false;
+var drawBetterBuildings = false;
 
 var metas = [
   {
@@ -78,6 +79,18 @@ var metas = [
     outcome: "merge",
     run: function(){
       document.getElementById("scoreinfo").style.display = "block";
+    }
+  },
+  {
+    id: -5.5,
+    title: "Draw better cities",
+    body: "No one wants to live in blue and red blocks.<br/>Dress up your cities with new colorful buildings.",
+    user: {
+      avatar_url: "http://i.imgur.com/dfMJ2.jpg"
+    },
+    outcome: "reject",
+    run: function(){
+      drawBetterBuildings = true;
     }
   },
   {
@@ -550,6 +563,22 @@ var MC = MC || (function() {
             this.width,
             this.height
         );
+        if(drawBetterBuildings){
+	        ctx.fillStyle = "yellow";
+	        ctx.strokeStyle = "#000";
+	        ctx.fillRect(
+	        	Math.floor(this.pos.x + this.width * 3 / 4),
+	        	Math.floor(this.pos.y + this.height / 2),
+	        	Math.floor(this.width / 2),
+	        	Math.floor(this.height / 2)
+	        );
+	        ctx.fillRect(
+	        	Math.floor(this.pos.x - this.width / 4),
+	        	Math.floor(this.pos.y + this.height / 2),
+	        	Math.floor(this.width / 2),
+	        	Math.floor(this.height / 2)
+	        );
+	    }
     };
 
     /**
