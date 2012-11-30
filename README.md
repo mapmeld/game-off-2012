@@ -2,7 +2,7 @@
 
 ### A game based on Github
 
-<img src="http://i.imgur.com/HBthT.png"/>
+<img src="http://i.imgur.com/SeUkG.png"/>
 
 ## Gameplay
 
@@ -26,11 +26,10 @@
 <ul>
 	<li>Add second defense launcher</li>
 	<li>Slow down incoming missiles</li>
-	<li>Draw cooler defense city</li>
 </ul>
 
 ## Customization
-Pull Command runs on Github Pages. You can generate new JSON files with the included ScrapeRepoPulls.py
+Pull Command runs on Github Pages. You can add new repos with the included ScrapeRepoPulls.py
 
 1) Set the repo list
 

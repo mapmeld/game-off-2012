@@ -11,6 +11,7 @@ repos = [
   #"twitter/bootstrap",
   #"rails/rails",
   #"nathanmarz/storm",
+  "joyent/node"
 ]
 
 output_pulls = [ ]
