@@ -12,8 +12,9 @@ html, body {
 }
 
 #gameinfo{
-	padding-left: 60px;
-	padding-right: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
 }
 
 .leftbar{

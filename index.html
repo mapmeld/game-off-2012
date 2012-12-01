@@ -10,9 +10,9 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="span10">
-        <div id="gameinfo">
-          <h2>Pull Command</h2>
+      <div class="span12">
+        <div id="gameinfo" class="hero-unit">
+          <h2>Welcome to Pull Command!</h2>
           <p>You run an online code library called a <strong>repo</strong>.</p>
           <p>Incoming missiles represent code changes known as <strong>pull requests</strong>.</p>
           <p>Launch interceptors by clicking inside the game. You gain points by shooting down rejected pull requests and letting successful (merged) ones pass through.</p>
@@ -25,20 +25,6 @@
           <br/>
         </div>
       </div>
-      
-      <!--
-      <div id="supportme" class="span2">
-      	<h4>About</h4>
-      	<a href="https://github.com/mapmeld/game-off-2012/">Source Code</a>
-      	<br/>
-      	<br/>
-      	<p>Tweet your support!</p>
-      	<iframe allowtransparency="true" frameborder="0" scrolling="no"
-        src="https://platform.twitter.com/widgets/tweet_button.html?count=none&text=Github%20game%3A%20shoot%20down%20pull%20requests%20mapmeld.github.com%2Fgame-off-2012%20%23ggo12"
-        style="width:130px; height:20px;"></iframe>
-      </div>
-      -->
-      
     </div>
     <br/>
     <div class="row">
@@ -97,7 +83,32 @@
       <div class="span1">
       </div>
     </div>
-    <p id="credit">Based on Andy Mason's <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">JavaScript Missile Command</a></p>
+    <div class="row">
+		<div class="span6">
+      	  <a href="https://github.com/mapmeld/game-off-2012/">Source Code</a>
+      	  <br/>
+      	  <br/>
+      	  <p>Tweet your support!</p>
+      	  <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?count=none&text=Github%20game%3A%20shoot%20down%20pull%20requests%20mapmeld.github.com%2Fgame-off-2012%20%23ggo12" style="width:130px; height:20px;"></iframe>
+		</div>
+    	<div class="span6">
+		    <p id="credit">
+		    	Pull Command is <a href="http://mapmeld.com" target="_blank">Nick Doiron</a>'s entry in the 2012 Github Game Off.
+		    	<br/>
+		    	Missile Command code was adapted from Andy Mason's MIT-licensed <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">Missile Command JavaScript Clone</a>.
+		    </p>
+		</div>
+	</div>
   </div>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36731956-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
 </body>
 </html>
