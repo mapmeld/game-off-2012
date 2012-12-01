@@ -48,7 +48,7 @@ Pull Command runs on Github Pages. You can add new repos with the included Scrap
 
 ## Inspiration
 
-<p>Based on Andy Mason's MIT-licensed <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">Missile Command JavaScript Clone</a>.</p>
+<p>Based on Andrew Mason's MIT-licensed <a href="https://github.com/andymason/Missile-Command-JavaScript-Clone" target="_blank">Missile Command JavaScript Clone</a>.</p>
 <p>Includes Bootstrap and jQuery</p>
 
 ## License
